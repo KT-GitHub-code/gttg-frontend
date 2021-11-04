@@ -6,7 +6,7 @@ export const PlanetProvider = (props) => {
     const [planets, setPlanets] = useState([])
 
     useEffect(() => {
-        fetch('https://localhost:44300/api/planet')
+        fetch('https://gttgbackendapi.azure-api.net/api/planet')
         .then(async res => {
             const newPlanets = await res.json();
             setPlanets( prevPlanets =>([ ...prevPlanets, ...newPlanets]) )})
